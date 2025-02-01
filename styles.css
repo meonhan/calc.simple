@@ -1,0 +1,193 @@
+/* styles.css */
+
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk body dengan gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient biru tua */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden; /* Untuk menghindari scrollbar */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Container utama */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Shadow lebih tebal */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border tipis untuk efek glassmorphism */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Judul kalkulator */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Efek shadow pada teks */
+}
+
+/* Grup input */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    width: 45%;
+    padding: 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border semi-transparan */
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Simbol operator */
+.operator-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Grup tombol */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.button-group button {
+    width: 22%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow pada tombol */
+}
+
+.button-group button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Efek hover sedikit naik */
+}
+
+.button-group button:active {
+    transform: translateY(0); /* Efek saat tombol ditekan */
+}
+
+/* Kotak hasil */
+.result-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow pada kotak hasil */
+}
+
+.result-box span {
+    font-weight: bold;
+    color: #3498db;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan gelap */
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    backdrop-filter: blur(5px); /* Efek blur */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #1f1f1f); /* Gradient dark mode */
+    color: #ddd;  /* Teks lebih terang untuk mode gelap */
+}
+
+body.dark-mode .container {
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang lebih gelap */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8); /* Shadow lebih gelap */
+}
+
+body.dark-mode .input-group input {
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang input lebih gelap */
+    border-color: rgba(255, 255, 255, 0.5); /* Border lebih terang */
+}
+
+body.dark-mode .operator-icon {
+    color: #1abc9c; /* Ubah warna simbol operator menjadi lebih soft */
+}
+
+body.dark-mode .button-group button {
+    background-color: #2c3e50;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow lebih gelap */
+}
+
+body.dark-mode .button-group button:hover {
+    background-color: #34495e; /* Hover lebih gelap */
+}
+
+body.dark-mode .result-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan gelap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow lebih gelap */
+}
+
+body.dark-mode footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Footer lebih gelap */
+}
+
+/* Tombol dark mode (🌙) */
+#toggle-dark-mode {
+    position: absolute;
+    top: 1rem;  /* Jarak dari atas */
+    right: 1rem;  /* Jarak dari kanan */
+    background: none;  /* Tidak ada background */
+    border: none;  /* Tidak ada border */
+    color: #3498db;  /* Warna ikon default */
+    font-size: 1.5rem;  /* Ukuran ikon */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode #toggle-dark-mode {
+    color: rgba(255, 255, 255, 0.7); /* Warna ikon di dark mode */
+}

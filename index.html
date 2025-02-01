@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="toggle-dark-mode">🌙Dark</button>
+        <h1>Kalkulator</h1>
+        <div class="input-group">
+            <input type="number" id="num1">
+            <span class="operator-icon" id="operator">+</span>
+            <input type="number" id="num2">
+        </div>
+        <div class="button-group">
+            <button onclick="tambah()">+</button>
+            <button onclick="kurang()">-</button>
+            <button onclick="kali()">×</button>
+            <button onclick="bagi()">÷</button>
+            <button onclick="pangkat()">^</button>
+        </div>
+        <div class="result-box">
+            <p>Hasil: <span id="hasil">0</span></p>
+        </div>
+    </div>
+
+    <!-- Footer untuk kredit -->
+    <footer>
+        <p>Buatan Han x Meon</p>
+    </footer>
+
+    <script src="hitungan.js"></script>
+    <script src="dark.js"></script>
+</body>
+</html>
